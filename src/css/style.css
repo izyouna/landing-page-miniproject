@@ -8,8 +8,9 @@
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../public/img/BGHero.png');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   
   min-height: 100vh;
   width: 100%;
@@ -18,15 +19,28 @@
 }
 
 header {
-  flex-grow: 1;
+  flex-grow: 0.3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  br {
+    display: block; /* บังคับตัดบรรทัด */
+  }
 }
 
+.header-title h1 {
+  font-size: 3.7em;
+  margin: 4% 0;
+}
+
+.header-title small {
+  font-size: 1.3em;
+}
+
+/*navigation bar*/
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -46,7 +60,7 @@ header {
 
 .menu ul {
   display: flex;
-  gap: 2em;
+  gap: 3em;
   list-style: none;
 }
 
@@ -56,9 +70,10 @@ header {
   font-size: 14px;
 }
 
-.cart ul {
-  display: flex;
-  list-style: none;
+/*cart*/
+.cart ul{
+    display: flex;
+    list-style: none;
 }
 
 .cart img {
@@ -68,15 +83,19 @@ header {
 
 /*Search Box*/
 .search {
-  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgb(247, 149, 64);
+  /* border: 1px solid rgba(255, 255, 255, 0.39); */
+
+  margin-top: 45px;
   --padding: 10px;
   display: flex;
-  align-items: center;
-  padding: var(--padding) 20px;
+  padding: var(--padding) 15px;
   border-radius: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .search-input {
@@ -94,5 +113,5 @@ header {
 }
 
 .search-icon {
-  color: white;
+  color: rgb(247, 149, 64);
 }
