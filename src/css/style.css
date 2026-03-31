@@ -5,7 +5,7 @@
 }
 
 /*ใช้ 100vh เพื่อให้เห็นพื้นหลังเต็มจอ */
-.container {
+.hero-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../public/img/BGHero.png');
   background-size: cover;
   background-position: top;
